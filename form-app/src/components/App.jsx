@@ -2,7 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+var userIsRegistered = true;
+
+function App() {
+	return (
+		<div className="container">
+			<Form isRegistered={userIsRegistered} />
+		</div>
+	);
+}
 
 //Challenge: Without moving the userIsRegistered variable,
 //1. Show Login as the button text if userIsRegistered is true.
